@@ -1,4 +1,10 @@
-import { Directive, OnInit, Input, Renderer2, HostListener } from "@angular/core";
+import {
+  Directive,
+  OnInit,
+  Input,
+  Renderer2,
+  HostListener
+} from "@angular/core";
 import { DomController } from "ionic-angular";
 
 @Directive({
@@ -17,7 +23,7 @@ export class HideHeaderDirective implements OnInit {
     });
   }
 
-  @HostListener('ionScroll', ['$event']) onContentScroll($event) {
-    
+  @HostListener("ionScroll", ["$event"]) onContentScroll($event) {
+    console.log($event);
   }
 }
