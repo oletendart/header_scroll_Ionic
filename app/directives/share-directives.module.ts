@@ -5,6 +5,7 @@ import { FadeHeaderDirective } from "./fade-header.directive";
 
 @NgModule({
   declarations: [HideHeaderDirective, FadeHeaderDirective],
-  imports: [CommonModule]
+  imports: [CommonModule],
+  exports: [HideHeaderDirective, FadeHeaderDirective]
 })
 export class SharedDirectivesModule {}
