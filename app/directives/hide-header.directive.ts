@@ -1,4 +1,4 @@
-import { Directive, OnInit, Input, Renderer2 } from "@angular/core";
+import { Directive, OnInit, Input, Renderer2, HostListener } from "@angular/core";
 import { DomController } from "ionic-angular";
 
 @Directive({
@@ -11,10 +11,13 @@ export class HideHeaderDirective implements OnInit {
   constructor(private renderer: Renderer2, private domCtrl: DomController) {}
 
   ngOnInit() {
-    console.log("Test:", this.toolbar);
     this.toolbar = this.toolbar.el;
     this.domCtrl.read(() => {
       this.toolbarHeight = this.toolbar.clientHeight;
     });
+  }
+
+  @HostListener('ionScroll', ['$event']) onContentScroll($event) {
+    
   }
 }
