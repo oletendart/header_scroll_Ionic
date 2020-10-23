@@ -25,9 +25,10 @@ export class HideHeaderDirective implements OnInit {
 
   @HostListener("ionScroll", ["$event"]) onContentScroll($event) {
     const scrollTop = $event.detail.scrollTop;
-    let newPosition = (scrollTop / 5);
-    
-    if ()
+    let newPosition = -(scrollTop / 5);
 
+    if (newPosition < -this.toolbarHeight) {
+      newPosition = -this.toolbarHeight;
+    }
   }
 }
