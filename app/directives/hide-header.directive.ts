@@ -30,5 +30,9 @@ export class HideHeaderDirective implements OnInit {
     if (newPosition < -this.toolbarHeight) {
       newPosition = -this.toolbarHeight;
     }
+
+    this.domCtrl.write(() => {
+      this.renderer.setStyle(this.toolbar, "top", `${newPosition}px`);
+    });
   }
 }
