@@ -35,6 +35,7 @@ export class HideHeaderDirective implements OnInit {
 
     this.domCtrl.write(() => {
       this.renderer.setStyle(this.toolbar, "top", `${newPosition}px`);
+      this.renderer.setStyle(this.toolbar, "opacity", newOpacity);
     });
   }
 }
