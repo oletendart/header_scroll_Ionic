@@ -8,7 +8,11 @@ export class HideHeaderDirective implements OnInit {
   @Input("appHideHeader") toolbar: any;
   private toolbarHeight = 44;
 
-  constructor(private renderer: Renderer2, private domCtrl: DomController) {
-    
+  constructor(private renderer: Renderer2, private domCtrl: DomController) {}
+
+  ngOnInit() {
+    this.domCtrl.read(() => {
+      this.toolbarHeight = this.toolbar.clientHeight;
+    });
   }
 }
