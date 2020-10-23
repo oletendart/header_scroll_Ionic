@@ -18,5 +18,7 @@ export class FadeHeaderDirective implements OnInit {
     if (scrollTop >= 255) {
       scrollTop = 255;
     }
+    const hexDist = scrollTop.toString(16);
+    console.log(hexDist)
   }
 }
