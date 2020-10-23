@@ -4,6 +4,7 @@ import { Directive, OnInit } from "@angular/core";
   selector: "[appHideHeader]"
 })
 export class HideHeaderDirective implements OnInit {
+  @Input("appHideHeader") toolbar: any;
   ngOnInit(): void {
     throw new Error("Method not implementd.");
   }
