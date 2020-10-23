@@ -24,6 +24,7 @@ export class HideHeaderDirective implements OnInit {
   }
 
   @HostListener("ionScroll", ["$event"]) onContentScroll($event) {
-    console.log($event);
+    const scrollTop = $event.detail.scrollTop;
+    console.log(scrollTop);
   }
 }
