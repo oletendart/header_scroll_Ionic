@@ -1,10 +1,4 @@
-import {
-  Directive,
-  OnInit,
-  Input,
-  Renderer2,
-  HostListener
-} from "@angular/core";
+import { Directive, OnInit, Input, HostListener } from "@angular/core";
 import { DomController } from "@ionic/angular";
 
 @Directive({
@@ -19,5 +13,10 @@ export class FadeHeaderDirective implements OnInit {
     this.toolbar = this.toolbar.el;
   }
 
-  @HostListener("ionScroll", ["$event"]) onContentScroll($event) {}
+  @HostListener("ionScroll", ["$event"]) onContentScroll($event) {
+    let scrollTop = $event.detail.scrollTop;
+    if (scrollTop >= 255) {
+      scrollTop = 255;
+    }
+  }
 }
