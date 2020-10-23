@@ -31,6 +31,8 @@ export class HideHeaderDirective implements OnInit {
       newPosition = -this.toolbarHeight;
     }
 
+    let newOpacity = 1 - newPosition / -this.toolbarHeight;
+
     this.domCtrl.write(() => {
       this.renderer.setStyle(this.toolbar, "top", `${newPosition}px`);
     });
