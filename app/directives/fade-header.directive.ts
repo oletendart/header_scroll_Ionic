@@ -21,7 +21,7 @@ export class FadeHeaderDirective implements OnInit {
     const hexDist = scrollTop.toString(16);
 
     this.domCtrl.write(() => {
-      this.toolbar.style.setProperty("--background", `#f4f5f8`);
+      this.toolbar.style.setProperty("--background", `#f4f5f8${hexDist}`);
     });
   }
 }
