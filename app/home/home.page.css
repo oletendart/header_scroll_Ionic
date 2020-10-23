@@ -1,0 +1,10 @@
+// Only necessary for the fade header effect
+ion-toolbar {
+  --background: transparent;
+  --border-color: transparent;
+}
+
+ion-content {
+  --offset-top: 0px;
+  position: absolute;
+}

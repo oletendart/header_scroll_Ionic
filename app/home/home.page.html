@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header #header>
   <ion-toolbar #toolbar>
     <ion-buttons slot="start">
       <ion-button (click)="close()" shape="round">
@@ -17,7 +17,7 @@
 </ion-header>
 
 <ion-content [fullScren]="true" scrollEvents="true" [appFadeHeader]="toolbar">
-  <!--<ion-content [fullScren]="true" scrollEvents="true" [appHideHeader]="toolbar"> -->
+  <!--<ion-content [fullScren]="true" scrollEvents="true" [appHideHeader]="header"> -->
   <img
     src="https://cdn.pixabay.com/photo/2017/09/02/13/21/guggenheim-museum-2707258_960_720.jpg"
   />
