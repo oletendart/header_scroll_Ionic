@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar #toolbar>
     <ion-buttons slot="start">
       <ion-button (click)="close()" shape="round">
         <ion-icon clot="icon-only" name="close"></ion-icon>
@@ -16,4 +16,4 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content appHideHeader [toolbar]="toolbar"> </ion-content>
+<ion-content [appHideHeader]="toolbar"> </ion-content>
